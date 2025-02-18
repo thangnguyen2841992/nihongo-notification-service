@@ -7,8 +7,9 @@
 
 <body>
     <p>Hello <span th:text="${name}"></span></p>
-    <p th:text="${content}"></p>
-    <a href="#">"Click vào đây để kích hoạt tài khoản của bạn"</a>
+    <p th:text="${content}"></p> <br>
+    <p>Bạn đã tạo tài khoản: <b th:text="${username}"></b></p>
+    <a th:href="${url}">Click vào đây để kích hoạt tài khoản của bạn</a>
     <p>Best Regards,</p>
     <p>
         <em>Thang Nguyen</em>

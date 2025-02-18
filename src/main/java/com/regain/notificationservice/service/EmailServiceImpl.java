@@ -36,6 +36,8 @@ public class EmailServiceImpl implements IEmailService {
             context.setVariable("name", messageDTO.getToName());
             context.setVariable("content", messageDTO.getContent());
             context.setVariable("username", messageDTO.getUsername());
+            String url = "http://localhost:3000/active/" + messageDTO.getUsername();
+            context.setVariable("url", url);
             String html = templateEngine.process("welcome-email", context);
 
 //            send Email
